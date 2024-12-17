@@ -202,7 +202,7 @@ def rectIntersect(point: Point, orig: Point, dir):
   if start <= end:
     # pg.draw.circle(surf, green, (point.x + t1x * dir[0], point.y + t1y * dir[1]), 3)
     # pg.draw.circle(surf, green, (point.x + t2x * dir[0], point.y + t2y * dir[1]), 3)
-    pg.draw.circle(surf, green, (orig.x + start * dir[0], orig.y + start * dir[1]), 3)
+    pg.draw.circle(surf, red, (orig.x + start * dir[0], orig.y + start * dir[1]), 5)
     # pg.draw.circle(surf, red, (orig.x + end * dir[0], orig.y + end * dir[1]), 3)
     return start
   else: return 1e9
@@ -227,7 +227,7 @@ while 1:
   
   kdtree = KdTree(points, 0, 800, 0, 800)
   kdtree.draw()
-  orig.draw(color=red,radius=7)
+  orig.draw(color=white,radius=3)
   
   dx = mpos.x - orig.x
   dy = mpos.y - orig.y
